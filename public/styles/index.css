@@ -1,0 +1,297 @@
+#app {
+    --nav-bar-background: #fff;
+    --global-padding: 8rem;
+    
+}
+
+#nav-bar {
+    --nav-elements-color: #343e5c;
+    --bars-color: #f0f2f7;
+    --unselected-items: #b9bed1;
+
+    width: 100%;
+    background-color: var(--nav-bar-background);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.principal-nav {
+    padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
+
+    display: flex;
+
+    border-bottom: 1px solid var(--bars-color);
+   
+}
+
+#nav-bar .left-side {
+    display: flex;
+    flex: 3;
+}
+
+#nav-bar .center-side {
+    flex: 6;
+}
+
+#nav-bar .right-side {
+    flex: 3;
+}
+
+
+
+.burger-container {
+    border-right: 1px solid var(--bars-color);
+    padding: 2rem
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 1.2rem;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+}
+.burger .burger-line {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--nav-elements-color);   
+    border-radius: 8px;
+}
+
+.left-side .logo {
+    padding: 2rem;
+}
+
+.logo .logo-img {
+    width: 6rem;
+    object-fit: contain;
+}
+
+
+.center-side .center-nav {
+    display: flex;
+    padding: 1.6rem;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.center-nav .item {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--nav-elements-color);
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+}
+
+.right-side .cart {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.cart .cart-btn {
+    background-color: transparent;
+    margin-right: 0.5rem;
+
+}
+
+.cart-btn .cart-icon {
+    padding: 6px;
+}
+
+.cart .btn-content {
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+
+}
+
+.cart .cart-icon {
+    font-size: 1.2rem;
+    color: var(--nav-elements-color);
+}
+
+.cart .items-quantity {
+    background-color: var(--bars-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.right-side .sign-in-btn {
+    font-variant: small-caps;
+    font-size: 1rem;
+    color: var(--nav-elements-color);
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid var(--bars-color);
+    padding: 0.5rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+#nav-bar .secondary-nav {
+    display: flex;
+    padding: 0 var(--global-padding);
+}
+
+.secondary-nav .secondary-navigation {
+    flex: 9;
+    display: flex;
+    padding-left: 2rem;
+}
+
+.secondary-navigation .sec-nav-left {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-items-container .sec-item{
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    color: var(--unselected-items);
+    font-weight: 500;
+}
+
+.sec-item.active {
+    color: var(--nav-elements-color);
+}
+
+
+.secondary-navigation .sec-nav-right {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+}
+
+.secondary-nav .text-search {
+    flex: 3;
+    border-right: 5px solid var(--bars-color);
+    border-left: 5px solid var(--bars-color);
+    padding: 1rem;
+    display: flex;
+}
+
+
+.text-search .search {
+    border: none;
+    text-indent: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.text-search .search-icon {
+    color: var(--nav-elements-color);
+}
+
+#support {
+    font-weight: 300;
+    margin: 0 2.5rem;
+}
+
+@media screen and (min-width: 960px ) {
+    :root {
+        font-size: 8px;
+    } 
+}
+
+@media screen and (min-width: 1166px ) {
+    :root {
+        font-size: 9px;
+    } 
+}
+
+@media screen and (min-width: 1366px ) {
+    :root {
+        font-size: 10px;
+    } 
+}
+
+@media screen and (min-width: 1420px ) {
+    :root {
+        font-size: 11px;
+    } 
+}
+
+@media screen and (min-width: 1620px ) {
+    :root {
+        font-size: 12px;
+    } 
+}
+
+@media screen and (min-width: 1820px ) {
+    :root {
+        font-size: 14px;
+    } 
+}
+
+
+@media screen and (min-width: 1920px ) {
+    :root {
+        font-size: 16px;
+    } 
+}
+
+@media screen and (min-width: 2140px ) {
+    :root {
+        font-size: 18px;
+    } 
+}
+
+@media screen and (min-width: 2340px ) {
+    :root {
+        font-size: 20px;
+    } 
+}
+
+
+@media screen and (min-width: 2540px ) {
+    :root {
+        font-size: 24px;
+    } 
+}
+
+@media screen and (min-width: 2840px ) {
+    :root {
+        font-size: 26px;
+    } 
+}
+
+@media screen and (min-width: 3440px ) {
+    :root {
+        font-size: 32px;
+    } 
+}
+
+
+@media screen and (min-width: 3840px ) {
+    :root {
+        font-size: 36px;
+    } 
+}
+
+
+
+
+
+
+
+
+
