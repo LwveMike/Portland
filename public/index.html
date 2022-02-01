@@ -5,14 +5,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/utils.css">
     <link rel="stylesheet" href="./styles/index.css">
 
     <title>Portland</title>
+
 </head>
 
 <body>
-    <h1>Portland</h1>
+    <div id="app">
+        <nav id="nav-bar">
+            <div class="principal-nav">
+                <div class="left-side ">
+                    <div class="burger-container">
+                        <div class="burger">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="logo centered">
+                        <img src="./assets/Portland.svg" alt="Logo" class="logo-img">
+                    </div>
+                </div>
+                <div class="center-side centered">
+                    <ul class="center-nav">
+                        <li class="item-container centered"><a href="#" class="item">Home</a></li>
+                        <li class="item-container centered"><a href="#" class="item">Devices</a></li>
+                        <li class="item-container centered"><a href="#" class="item">Delivery & Payment</a></li>
+                        <li class="item-container centered"><a href="#" class="item">Guarantee</a></li>
+                        <li class="item-container centered"><a href="#" class="item">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="cart">
+                        <button class="cart-btn centered">
+                            <i class="fas fa-shopping-cart cart-icon"></i>
+                            <p class="btn-content">cart</p>
+                        </button>
+                        <p class="items-quantity centered">0
+                        </p>
+                    </div>
+
+                    <button class="sign-in-btn">
+                        sign in
+                    </button>
+                </div>
+            </div>
+
+            <div class="secondary-nav centered">
+                <ul class="secondary-navigation centered">
+                    <div class="sec-nav-left">
+                        <li class="sec-items-container"><a href="#" class="sec-item">top ales</a></li>
+                        <li class="sec-items-container"><a href="#" class="sec-item">brand focus</a></li>
+                        <li class="sec-items-container"><a href="#" class="sec-item active">hi-tech</a></li>
+                        <li class="sec-items-container"><a href="#" class="sec-item">best sellers</a></li>
+                        <li class="sec-items-container"><a href="#" class="sec-item">projects</a></li>
+                    </div>
+                    <div class="sec-nav-right">
+                        <li class="sec-items-container"><a href="#" class="sec-item" id="support">support</a></li>
+                    </div>
+
+                </ul>
+
+                <div class="text-search">
+
+                    <div class="input-with-icon">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search" placeholder="I'm looking for ...">
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
 </body>
 
 </html>
