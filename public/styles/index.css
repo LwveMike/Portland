@@ -141,12 +141,6 @@
 
 
 
-
-
-
-
-
-
 #nav-bar .secondary-nav {
     display: flex;
     padding: 0 var(--global-padding);
@@ -286,6 +280,113 @@
         font-size: 36px;
     } 
 }
+
+
+
+#app #carousel {
+    --carousel-background: #1c1e23;
+    --arrow-color: rgba(255,255,255,0.5);
+    --buy-btn-background: #2754eb;
+    display: flex;
+    padding: 1rem var(--global-padding);
+    background-color: var(--carousel-background);
+    height: 36rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#carousel .info-text {
+    flex: 1;
+}
+
+#carousel .info-img-container {
+    flex: 1;
+    display: flex;
+    margin-right: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-img-container .info-img {
+    margin-left: 4rem;
+    margin-top: 6rem;
+    height: 160%;
+}
+
+.info-img-container .right-arrow {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--arrow-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.right-arrow .right-arrow-icon {
+    font-size: 1.4rem;
+    color: white;
+    
+}
+
+#carousel .info-text {
+    padding-left: 2rem;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.info-text > * {
+    margin: 1.4rem 0;
+    color: white;
+}
+
+.info-text .info-text-title {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.info-text .info-text-body {
+    font-size: 1rem;
+}
+
+.info-text .btn-group .buy-btn {
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    font-weight: 700;
+    color: white;
+    background-color: var(--buy-btn-background);  
+    border-radius: 50px;
+    padding: 0.4rem 2rem;
+}
+
+#carousel .dots-container {
+    position: absolute;
+    display: flex;
+    width: 4.6rem;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+}
+
+.dots-container .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.dots-container .dot.full {
+    background-color: white;
+}
+
+
+
+
+
 
 
 

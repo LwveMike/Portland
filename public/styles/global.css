@@ -10,7 +10,7 @@
     font-size: 8px;
 }
 
-* :not(.fas) {
+* :not(.icon) {
     font-family: 'Montserrat' ,sans-serif;
 
 }
