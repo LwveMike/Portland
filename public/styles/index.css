@@ -827,7 +827,7 @@ input[type=number] {
     padding-right: 4rem;
 }
 
-.section-select-variant label {
+.section-select-variant.pp label {
     text-transform: uppercase;
     font-weight: 600;
 }
