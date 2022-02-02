@@ -10,7 +10,7 @@
     font-size: 8px;
 }
 
-* :not(.icon) {
+* :not(.icon){
     font-family: 'Montserrat' ,sans-serif;
 
 }
@@ -28,8 +28,9 @@ li {
     list-style-type: none;
 }
 
-button {
+button, select{
     cursor: pointer;
     background-color: transparent;
     border: none;
 }
+

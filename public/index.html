@@ -125,6 +125,47 @@
                 <div class="dot"></div>
             </div>
         </div>
+
+
+        <div id="website-body">
+            <div class="top-filter-container">
+                <div class="filter-area">
+                    <label for="match" class="match-title">sort by :</label>
+                    <select name="match" id="match-select">
+                        <option value="best match" class="match-select-op">best match</option>
+                        <option value="worst match" class="match-select-op">worst match</option>
+                    </select>
+                </div>
+
+                <div class="filter-area">
+                    <div class="keyword-container">
+                        <div class="keywords-title">keywords</div>
+                        <input type="text" class="keywords-input" placeholder="Tablet">
+                    </div>
+
+                    <div class="price-range-container">
+                        <div class="price-range-title">price</div>
+                        <input type="number" class="price-range price-range-min" value="1">
+                        <div class="dash-icon">-</div>
+
+                        <input type="number" class="price-range price-range-max" value="10000">
+                    </div>
+
+                    <div class="shipping-container">
+                        <input id="free" class="radio-custom icon" name="radio-group" type="radio" checked>
+                        <label for="free" class="radio-custom-label">Free Shipping</label>
+                    </div>
+                </div>
+
+                <div class="filter-area">
+                    <label for="location" class="location-title">ship to :</label>
+                    <select name="location" id="location-select">
+                        <option value="usa" class="location-select-op">usa</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 </body>
