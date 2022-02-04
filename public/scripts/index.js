@@ -97,6 +97,116 @@ selects.forEach(select => {
 
 
 
+// Special Sections
+
+const toggleSections = (section) => {
+    let visible = fromStringToBoolean(section.getAttribute('data-opened'));
+
+    const iconElement = section.querySelector('.icon');
+
+    const itemsLength = section.querySelectorAll('.item').length;
+    const rem = parseInt(window.getComputedStyle(section, null).fontSize);
+
+    let heightpx = itemsLength * rem * 4;
+
+    const sectionData = section.querySelector('.section-data');
+
+    if (visible) {
+        iconElement.style.transform = 'rotate(0deg)';
+
+        let interval = setInterval(() => {
+            if (heightpx > 0) {
+                sectionData.style.height = `${heightpx - 1}px`;
+                heightpx--;
+            } else {
+                clearInterval(interval);
+            }
+
+        }, 10 - itemsLength);
+
+    } else {
+        iconElement.style.transform = 'rotate(90deg)';
+
+        let h = 0;
+        let interval = setInterval(() => {
+            if (h <= heightpx) {
+                sectionData.style.height = `${h + 1}px`;
+                h++;
+            } else {
+                clearInterval(interval);
+            }
+
+        }, 10 - itemsLength);
+
+
+    }
+
+    section.setAttribute('data-opened', !visible);
+
+}
+
+
+const closeSections = (section) => {
+    const iconElement = section.querySelector('.icon');
+    iconElement.style.transform = 'rotate(0deg)';
+
+    const itemsLength = section.querySelectorAll('.item').length;
+    const rem = parseInt(window.getComputedStyle(section, null).fontSize);
+
+    let heightpx = itemsLength * rem * 4;
+
+    const sectionData = section.querySelector('.section-data');
+
+    let interval = setInterval(() => {
+        if (heightpx > 0) {
+            sectionData.style.height = `${heightpx - 1}px`;
+            heightpx--;
+        } else {
+            clearInterval(interval);
+        }
+
+    }, 10 - itemsLength);
+
+
+
+    section.setAttribute('data-opened', "false");
+}
+
+
+
+const sections = [...document.querySelectorAll('.special-section')];
+
+
+let prevSection = null;
+
+sections.forEach(section => {
+
+    section.addEventListener('click', (event) => {
+        if (event.target == section.children[0] || event.target == section.children[0].children[0] || event.target == section.querySelector('.icon')) {
+            if (!prevSection) {
+                prevSection = section;
+                toggleSections(section);
+
+            } else if (prevSection === section) {
+                toggleSections(section);
+            } else {
+                closeSections(prevSection);
+                prevSection = section;
+                toggleSections(section);
+
+            }
+
+        }
+    })
+})
+
+
+
+
+
+
+
+
 
 
 
