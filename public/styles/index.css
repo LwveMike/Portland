@@ -2,6 +2,10 @@
     --nav-bar-background: #fff;
     --global-padding: 8rem;
     --containers-background: white;
+
+    --select-color: #00e2aa;
+    --select-hover: rgba(0,0,0,0.05);
+    --select-options-background: #35495e;
     
 }
 
@@ -284,23 +288,23 @@
 
 
 
-#app #carousel {
+#app .carousel-item {
     --carousel-background: #1c1e23;
     --arrow-color: rgba(255,255,255,0.5);
     --buy-btn-background: #2754eb;
     display: flex;
     padding: 1rem var(--global-padding);
     background-color: var(--carousel-background);
-    height: 36rem;
-    position: relative;
+    height: 40rem;
     overflow: hidden;
+    position: relative;
 }
 
-#carousel .info-text {
+.carousel-item .info-text {
     flex: 1;
 }
 
-#carousel .info-img-container {
+.carousel-item .info-img-container {
     flex: 1;
     display: flex;
     margin-right: 4rem;
@@ -322,13 +326,25 @@
     cursor: pointer;
 }
 
+.info-img[alt="google_pixel"], .info-img[alt="one_plus"]  {
+    height: 100%;
+    margin-top: 0;
+}
+
+.info-img[alt="samsung_fold"]  {
+    height: 70%;
+    margin-top: 0;
+}
+
+
+
 .right-arrow .right-arrow-icon {
     font-size: 1.4rem;
     color: white;
     
 }
 
-#carousel .info-text {
+.carousel-item .info-text {
     padding-left: 2rem;
     margin-left: 4rem;
     display: flex;
@@ -361,7 +377,7 @@
     padding: 0.4rem 2rem;
 }
 
-#carousel .dots-container {
+.carousel-item .dots-container {
     position: absolute;
     display: flex;
     width: 4.6rem;
@@ -1080,6 +1096,7 @@ input[type=number] {
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
+    transition: box-shadow 500ms ease;
 }
 
 .individual a.active {
@@ -1333,13 +1350,94 @@ input[type=number] {
 }
 
 
-/* 
-@media  screen and (orientation: landscape) {
-    * {
-        background-color: black;
-    }
 
-} */
+
+.my-select {
+    width: 10rem;
+    height: 3rem;
+
+    border: 3px solid var(--select-color);
+
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    transition: background-color 600ms ease;
+
+    font-variant: small-caps;
+    font-weight: 600;
+
+}
+
+.my-select:hover {
+    background-color: var(--select-hover);
+    transition: background-color 600ms ease;
+}
+
+.my-select .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.my-select .arrow .icon {
+    font-size: 12px;
+    transition: all 500ms ease;
+}
+
+.my-select .options {
+    position: absolute;
+    width: calc(100%  + 6px);
+    left: -3px;
+    top: 100%;
+    border: 3px solid var(--select-color);
+    border-top: none;
+}
+
+.my-select .options .option {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+
+    color: white;
+    background-color: var(--select-options-background);
+
+}
+
+.my-select .options .option:hover {
+    color: var(--select-options-background);
+    background-color: white;
+}
+
+
+
+.my-select .options .option:last-child {
+    border-bottom: none;
+}
+
+
+
+
+.my-select[data-open="false"] .options {
+    display: none;
+}
+
+.my-select[data-open="true"] .options {
+    display: block;
+}
+
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+
 
 
 

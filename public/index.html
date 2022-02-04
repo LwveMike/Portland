@@ -29,6 +29,17 @@
     <link rel="icon" href="./assets/favicon.svg">
     <title>Portland</title>
 
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+
 </head>
 
 <body>
@@ -100,41 +111,141 @@
             </div>
         </nav>
 
-        <div id="carousel">
+
+        <div class="fotorama" data-width="100%" data-ratio="600/200" data-autoplay="true"
+            data-stopautoplayontouch="false">
+            <div class="carousel-item">
+                <div class="info-text">
+                    <h1 class="info-text-title">iPhone 6 32Gb Black</h1>
+                    <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
+                        he
+                        had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
+                        nobis
+                        dolore, saepe atque iure ex.</div>
+                    <div class="btn-group">
+                        <button class="buy-btn .centered">buy now</button>
+                    </div>
+                </div>
+                <div class="info-img-container">
+                    <img src="./assets/iphone6.webp" alt="Iphone 6" class="info-img">
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="info-text">
+                    <h1 class="info-text-title">Google Pixel 6 256Gb White</h1>
+                    <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
+                        he
+                        had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
+                        nobis
+                        dolore, saepe atque iure ex.</div>
+                    <div class="btn-group">
+                        <button class="buy-btn .centered">buy now</button>
+                    </div>
+                </div>
+                <div class="info-img-container">
+                    <img src="./assets/google_pixel6.webp" alt="google_pixel" class="info-img">
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="info-text">
+                    <h1 class="info-text-title">Samsung Galaxy Fold 128Gb Black</h1>
+                    <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
+                        he
+                        had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
+                        nobis
+                        dolore, saepe atque iure ex.</div>
+                    <div class="btn-group">
+                        <button class="buy-btn .centered">buy now</button>
+                    </div>
+                </div>
+                <div class="info-img-container">
+                    <img src="./assets/samsung_fold.webp" alt="samsung_fold" class="info-img">
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="info-text">
+                    <h1 class="info-text-title">One Plus 10 Pro</h1>
+                    <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
+                        he
+                        had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
+                        nobis
+                        dolore, saepe atque iure ex.</div>
+                    <div class="btn-group">
+                        <button class="buy-btn .centered">buy now</button>
+                    </div>
+                </div>
+                <div class="info-img-container">
+                    <img src="./assets/oneplus_10_pro.webp" alt="one_plus" class="info-img">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- <div id="carousel">
             <div class="info-text">
                 <h1 class="info-text-title">iPhone 6 32Gb Black</h1>
-                <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as he
+                <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
+                    he
                     had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae nobis
+                    dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
+                    nobis
                     dolore, saepe atque iure ex.</div>
                 <div class="btn-group">
                     <button class="buy-btn .centered">buy now</button>
                 </div>
             </div>
             <div class="info-img-container">
-                <img src="./assets/iphone6.png" alt="Iphone 6" class="info-img">
+                <img src="./assets/iphone6.webp" alt="Iphone 6" class="info-img">
                 <div class="right-arrow centered">
                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                 </div>
             </div>
-            <div class="dots-container">
+
+              <div class="dots-container">
                 <div class="dot full"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
                 <div class="dot"></div>
-            </div>
-        </div>
+              </div>
+
+        </div> -->
 
 
         <div id="website-body">
             <div class="top-filter-container">
                 <div class="filter-area">
                     <label for="match" class="match-title">sort by :</label>
-                    <select name="match" id="match-select">
-                        <option value="best match" class="match-select-op">best match</option>
-                        <option value="worst match" class="match-select-op">worst match</option>
-                    </select>
+                    <div class="my-select" data-open="false">
+                        <div class="my-select-selected"></div>
+
+                        <ul class="options">
+                            <li class="option">best match</li>
+                            <li class="option">worst match</li>
+                            <li class="option">no match</li>
+                            <li class="option">1 match</li>
+                        </ul>
+
+                        <div class="arrow">
+                            <i class="fal fa-angle-down select-arrow icon"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="filter-area">
@@ -152,16 +263,27 @@
                     </div>
 
                     <div class="shipping-container">
-                        <input id="free" class="radio-custom icon" name="radio-group" type="radio" checked>
+                        <input id="free" class="radio-custom icon" name="radio-group" type="checkbox">
                         <label for="free" class="radio-custom-label">Free Shipping</label>
                     </div>
                 </div>
 
                 <div class="filter-area">
                     <label for="location" class="location-title">ship to :</label>
-                    <select name="location" id="location-select">
-                        <option value="usa" class="location-select-op">usa</option>
-                    </select>
+                    <div class="my-select" data-open="false">
+                        <div class="my-select-selected"></div>
+
+                        <ul class="options">
+                            <li class="option">usa</li>
+                            <li class="option">japan</li>
+                            <li class="option">china</li>
+                            <li class="option">kazakhstan</li>
+                        </ul>
+
+                        <div class="arrow">
+                            <i class="fal fa-angle-down select-arrow icon"></i>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -318,7 +440,8 @@
                                 <div class="check-custom-container">
                                     <input id="not-working" class="check-custom icon" type="checkbox" name="op4"
                                         value="not-working">
-                                    <label for="not-working" class="check-custom-label">For Parts or Not Working</label>
+                                    <label for="not-working" class="check-custom-label">For Parts or Not
+                                        Working</label>
                                 </div>
                             </div>
 
@@ -360,28 +483,28 @@
 
                 <div class="products-container">
                     <div class="product simple size-s">
-                        <img src="./assets/products/appletv32gb.png" alt="apple" class="img-content">
+                        <img src="./assets/products/appletv32gb.webp" alt="apple" class="img-content">
                         <h1 class="product-title">Apple TV 32GB</h1>
                         <h3 class="product-color">black</h3>
                         <div class="product-price">$49.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/pebbletime.png" alt="pebble" class="img-content">
+                        <img src="./assets/products/pebbletime.webp" alt="pebble" class="img-content">
                         <h1 class="product-title">Pebble Time</h1>
                         <h3 class="product-color">red</h3>
                         <div class="product-price">$29.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/zendure4portusb.png" alt="zendure" class="img-content">
+                        <img src="./assets/products/zendure4portusb.webp" alt="zendure" class="img-content">
                         <h1 class="product-title">Zendure 4-Port USB</h1>
                         <h3 class="product-color">white</h3>
                         <div class="product-price">$49.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/withingssmartbodyanalyzerws50.png" alt="withings"
+                        <img src="./assets/products/withingssmartbodyanalyzerws50.webp" alt="withings"
                             class="img-content">
                         <h1 class="product-title">Withings Smart Body Analyzer ws-50</h1>
                         <h3 class="product-color">black</h3>
@@ -390,7 +513,7 @@
 
                     <div class="product promoted size-m">
                         <div class="img-container">
-                            <img src="./assets/products/jblcharge2.png" alt="jblcharge" class="img-content">
+                            <img src="./assets/products/jblcharge2.webp" alt="jblcharge" class="img-content">
                             <div class="product-price">$39.99</div>
                         </div>
                         <div class="product-details">
@@ -415,35 +538,35 @@
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/olloclipnew.png" alt="olloclipnew" class="img-content">
+                        <img src="./assets/products/olloclipnew.webp" alt="olloclipnew" class="img-content">
                         <h1 class="product-title">Ollo Clip New</h1>
                         <h3 class="product-color">silver</h3>
                         <div class="product-price">$19.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/fitbitchargehr.png" alt="fitbitchargehr" class="img-content">
+                        <img src="./assets/products/fitbitchargehr.webp" alt="fitbitchargehr" class="img-content">
                         <h1 class="product-title">Fitbit Charge HR Heart Rate and Activity Tracker</h1>
                         <h3 class="product-color">silver</h3>
                         <div class="product-price">$19.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/applewatchsport.png" alt="applewatchsport" class="img-content">
+                        <img src="./assets/products/applewatchsport.webp" alt="applewatchsport" class="img-content">
                         <h1 class="product-title">Apple Watch Sport 38mm Silver Aluminum Case</h1>
                         <h3 class="product-color">white</h3>
                         <div class="product-price">$49.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/bosesoundlink.png" alt="bose" class="img-content">
+                        <img src="./assets/products/bosesoundlink.webp" alt="bose" class="img-content">
                         <h1 class="product-title">Bose SoundLink On-Ear Headphones</h1>
                         <h3 class="product-color">white</h3>
                         <div class="product-price">$119.99</div>
                     </div>
 
                     <div class="product simple size-s">
-                        <img src="./assets/products/sonosplaywireless.png" alt="sonos" class="img-content">
+                        <img src="./assets/products/sonosplaywireless.webp" alt="sonos" class="img-content">
                         <h1 class="product-title">Sonos Play-1 Wireless HiFi System</h1>
                         <h3 class="product-color">black</h3>
                         <div class="product-price">$99.99</div>
@@ -451,7 +574,7 @@
 
                     <div class="product complicated size-s">
                         <div class="img-container">
-                            <img src="./assets/products/nestlearningthermostat.png" alt="nest" class="img-content">
+                            <img src="./assets/products/nestlearningthermostat.webp" alt="nest" class="img-content">
                             <div class="details">
                                 <h1 class="product-title">Nest Learning Thermostat, 3rd Generation </h1>
                                 <div class="product-price">$49.99</div>
@@ -492,7 +615,7 @@
 
                 <div class="recommended-products">
                     <div class="recommended-product">
-                        <img src="./assets/recommended-products/beanie.png" alt="beanie" class="img-content">
+                        <img src="./assets/recommended-products/beanie.webp" alt="beanie" class="img-content">
                         <div class="recommended-product-title">Beanie</div>
                         <div class="recommended-product-color">green</div>
                         <div class="price-container">
@@ -502,7 +625,7 @@
                     </div>
 
                     <div class="recommended-product">
-                        <img src="./assets/recommended-products/tshirt.png" alt="tshirt" class="img-content">
+                        <img src="./assets/recommended-products/tshirt.webp" alt="tshirt" class="img-content">
                         <div class="recommended-product-title">T-Shirt with a print</div>
                         <div class="recommended-product-color">dark blue</div>
                         <div class="price-container">
@@ -512,7 +635,7 @@
                     </div>
 
                     <div class="recommended-product">
-                        <img src="./assets/recommended-products/hoodie.png" alt="hoddie" class="img-content">
+                        <img src="./assets/recommended-products/hoodie.webp" alt="hoddie" class="img-content">
                         <div class="recommended-product-title">Pile-Lined Hooded Jacket</div>
                         <div class="recommended-product-color">dark blue</div>
                         <div class="price-container">
@@ -522,7 +645,7 @@
                     </div>
 
                     <div class="recommended-product">
-                        <img src="./assets/recommended-products/trainers.png" alt="trainers" class="img-content">
+                        <img src="./assets/recommended-products/trainers.webp" alt="trainers" class="img-content">
                         <div class="recommended-product-title">Trainers</div>
                         <div class="recommended-product-color">space gray</div>
                         <div class="price-container">
@@ -543,7 +666,7 @@
             <div class="rev-container">
                 <div class="rev">
                     <div class="top-part">
-                        <img src="./assets/people/celia-fields.png" alt="celia-fields" class="avatar">
+                        <img src="./assets/people/celia-fields.webp" alt="celia-fields" class="avatar">
                         <div class="details">
                             <div class="name">Celia Fields</div>
                             <div class="position">UX Expert</div>
@@ -558,7 +681,7 @@
 
                 <div class="rev">
                     <div class="top-part">
-                        <img src="./assets/people/alexander-lee.png" alt="alexander-lee" class="avatar">
+                        <img src="./assets/people/alexander-lee.webp" alt="alexander-lee" class="avatar">
                         <div class="details">
                             <div class="name">Alexander Lee</div>
                             <div class="position">Founder</div>
@@ -573,7 +696,7 @@
 
                 <div class="rev">
                     <div class="top-part">
-                        <img src="./assets/people/lenora-sandoval.png" alt="lenora-sandoval" class="avatar">
+                        <img src="./assets/people/lenora-sandoval.webp" alt="lenora-sandoval" class="avatar">
                         <div class="details">
                             <div class="name">Lenora Sandoval</div>
                             <div class="position">Product Manager</div>
@@ -617,7 +740,8 @@
 
             <div class="bottom-part">
                 <div class="quote">
-                    She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for
+                    She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey
+                    for
                     having been born on a Friday.
                 </div>
 
@@ -628,6 +752,10 @@
             </div>
         </div>
     </div>
+
+
+
+    <script defer src="./scripts/index.js"></script>
 
 
 </body>
