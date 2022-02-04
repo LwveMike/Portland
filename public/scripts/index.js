@@ -24,6 +24,14 @@ const toggleSelect = (select) => {
 }
 
 
+const hideSelect = (select) => {
+    let visible = false;
+    deleteSelected(select);
+
+    select.setAttribute('data-open', visible);
+
+}
+
 const deleteSelected = (select) => {
     const currentValue = select.querySelector('.my-select-selected').textContent;
 
@@ -61,10 +69,17 @@ const changeValue = (select, option) => {
 
 
 
+
 selects.forEach(select => {
+
+    select.addEventListener('blur', () => {
+        hideSelect(select);
+    });
 
     select.addEventListener('click', () => {
         toggleSelect(select);
+
+
 
         const options = [...select.querySelectorAll('.option')];
 
@@ -76,6 +91,7 @@ selects.forEach(select => {
 
     })
 })
+
 
 
 
