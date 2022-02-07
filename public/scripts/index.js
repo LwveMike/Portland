@@ -1,15 +1,5 @@
-const selects = [...document.querySelectorAll('.my-select')];
 
-
-// Initialization
-
-selects.forEach(select => {
-    let defaultValue = select.querySelector('.options').children[0].textContent;
-
-    let selectedValue = select.querySelector('.my-select-selected');
-    selectedValue.textContent = defaultValue;
-});
-
+// helper functions
 
 const fromStringToBoolean = string => string === 'true' ? true : false;
 
@@ -22,7 +12,6 @@ const toggleSelect = (select) => {
 
     select.setAttribute('data-open', !visible);
 }
-
 
 const hideSelect = (select) => {
     let visible = false;
@@ -48,6 +37,7 @@ const deleteSelected = (select) => {
     })
 }
 
+
 const changeArrow = (isOpen, select) => {
     const iconElement = select.querySelector('.icon');
 
@@ -68,137 +58,133 @@ const changeValue = (select, option) => {
 }
 
 
-
-
-selects.forEach(select => {
-
-    select.addEventListener('blur', () => {
-        hideSelect(select);
-    });
-
-    select.addEventListener('click', () => {
-        toggleSelect(select);
-
-
-
-        const options = [...select.querySelectorAll('.option')];
-
-        options.forEach(option => {
-            option.addEventListener('click', () => {
-                changeValue(select, option);
-            })
-        })
-
-    })
-})
+const rotateIcon = (icon, deg) => {
+    icon.style.transform = `rotate(${deg}deg)`;
+}
 
 
 
 
+const toggleVisual = (section) => {
 
-
-// Special Sections
-
-const toggleSections = (section) => {
     let visible = fromStringToBoolean(section.getAttribute('data-opened'));
-
-    const iconElement = section.querySelector('.icon');
-
-    const itemsLength = section.querySelectorAll('.item').length;
-    const rem = parseInt(window.getComputedStyle(section, null).fontSize);
-
-    let heightpx = itemsLength * rem * 4;
-
+    const arrowIcon = section.querySelector('.icon');
     const sectionData = section.querySelector('.section-data');
+    const itemsLength = sectionData.querySelectorAll('.item').length;
+
+
 
     if (visible) {
-        iconElement.style.transform = 'rotate(0deg)';
-
-        let interval = setInterval(() => {
-            if (heightpx > 0) {
-                sectionData.style.height = `${heightpx - 1}px`;
-                heightpx--;
-            } else {
-                clearInterval(interval);
-            }
-
-        }, 10 - itemsLength);
-
+        rotateIcon(arrowIcon, 0);
+        sectionData.style.maxHeight = '0';
     } else {
-        iconElement.style.transform = 'rotate(90deg)';
-
-        let h = 0;
-        let interval = setInterval(() => {
-            if (h <= heightpx) {
-                sectionData.style.height = `${h + 1}px`;
-                h++;
-            } else {
-                clearInterval(interval);
-            }
-
-        }, 10 - itemsLength);
-
-
+        rotateIcon(arrowIcon, 90);
+        sectionData.style.maxHeight = `${itemsLength * 4.01}rem`;
     }
 
     section.setAttribute('data-opened', !visible);
 
 }
 
+const closeVisual = (section) => {
 
-const closeSections = (section) => {
-    const iconElement = section.querySelector('.icon');
-    iconElement.style.transform = 'rotate(0deg)';
-
-    const itemsLength = section.querySelectorAll('.item').length;
-    const rem = parseInt(window.getComputedStyle(section, null).fontSize);
-
-    let heightpx = itemsLength * rem * 4;
-
+    const arrowIcon = section.querySelector('.icon');
     const sectionData = section.querySelector('.section-data');
 
-    let interval = setInterval(() => {
-        if (heightpx > 0) {
-            sectionData.style.height = `${heightpx - 1}px`;
-            heightpx--;
-        } else {
-            clearInterval(interval);
-        }
+    rotateIcon(arrowIcon, 0);
+    sectionData.style.maxHeight = '0';
 
-    }, 10 - itemsLength);
+    section.setAttribute('data-opened', false);
 
-
-
-    section.setAttribute('data-opened', "false");
 }
 
 
 
-const sections = [...document.querySelectorAll('.special-section')];
 
 
-let prevSection = null;
 
-sections.forEach(section => {
+// Initialization
 
-    section.addEventListener('click', (event) => {
-        if (event.target == section.children[0] || event.target == section.children[0].children[0] || event.target == section.querySelector('.icon')) {
-            if (!prevSection) {
+
+const selectInit = () => {
+    const selects = [...document.querySelectorAll('.my-select')];
+
+    selects.forEach(select => {
+        let defaultValue = select.querySelector('.options').children[0].textContent;
+
+        let selectedValue = select.querySelector('.my-select-selected');
+        selectedValue.textContent = defaultValue;
+    });
+
+    selects.forEach(select => {
+
+        select.addEventListener('blur', () => {
+            hideSelect(select);
+        });
+
+        select.addEventListener('click', () => {
+            toggleSelect(select);
+
+
+
+            const options = [...select.querySelectorAll('.option')];
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    changeValue(select, option);
+                })
+            })
+
+        })
+    })
+
+}
+
+
+const visualInit = () => {
+
+    let prevSection = null;
+
+
+    const sections = document.querySelectorAll('.special-section');
+
+    sections.forEach(section => {
+        const visual = section.querySelector('.visual');
+
+        visual.addEventListener('click', () => {
+
+            if (prevSection === null) {
                 prevSection = section;
-                toggleSections(section);
-
+                toggleVisual(prevSection);
             } else if (prevSection === section) {
-                toggleSections(section);
+                toggleVisual(section);
             } else {
-                closeSections(prevSection);
+                closeVisual(prevSection);
                 prevSection = section;
-                toggleSections(section);
-
+                toggleVisual(section);
             }
 
-        }
+
+        })
     })
-})
+
+}
+
+
+
+
+// main
+
+
+(function main() {
+    selectInit();
+    visualInit()
+})();
+
+
+
+
+
 
 
 

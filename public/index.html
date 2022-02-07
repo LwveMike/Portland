@@ -42,6 +42,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
 </head>
 
 <body>
@@ -58,16 +60,25 @@
                     </div>
 
                     <div class="logo centered">
-                        <img src="./assets/Portland-black.svg" alt="Logo" class="logo-img">
+                        <a href="/"><img src="./assets/Portland-black.svg" alt="Logo" class="logo-img"></a>
                     </div>
                 </div>
                 <div class="center-side centered">
                     <ul class="center-nav">
-                        <li class="item-container centered"><a href="#" class="item">Home</a></li>
-                        <li class="item-container centered"><a href="#" class="item">Devices</a></li>
-                        <li class="item-container centered"><a href="#" class="item">Delivery & Payment</a></li>
-                        <li class="item-container centered"><a href="#" class="item">Guarantee</a></li>
-                        <li class="item-container centered"><a href="#" class="item">About Us</a></li>
+                        <li class="item-container centered">
+                            <div class="item">Home</div< /li>
+                        <li class="item-container centered">
+                            <div class="item">Devices</div>
+                        </li>
+                        <li class="item-container centered">
+                            <div class="item">Delivery & Payment</div>
+                        </li>
+                        <li class="item-container centered">
+                            <div class="item">Guarantee</div>
+                        </li>
+                        <li class="item-container centered">
+                            <div class="item">About Us</div>
+                        </li>
                     </ul>
                 </div>
                 <div class="right-side">
@@ -89,14 +100,24 @@
             <div class="secondary-nav centered">
                 <ul class="secondary-navigation centered">
                     <div class="sec-nav-left">
-                        <li class="sec-items-container"><a href="#" class="sec-item">top sales</a></li>
-                        <li class="sec-items-container"><a href="#" class="sec-item">brand focus</a></li>
-                        <li class="sec-items-container"><a href="#" class="sec-item active">hi-tech</a></li>
-                        <li class="sec-items-container"><a href="#" class="sec-item">best sellers</a></li>
-                        <li class="sec-items-container"><a href="#" class="sec-item">projects</a></li>
+                        <li class="sec-items-container">
+                            <div class="sec-item">top sales</div>
+                        </li>
+                        <li class="sec-items-container">
+                            <div class="sec-item">brand focus</div>
+                        </li>
+                        <li class="sec-items-container">
+                            <div class="sec-item active">hi-tech</div>
+                        </li>
+                        <li class="sec-items-container">
+                            <div class="sec-item">best sellers</div>
+                        </li>
+                        <li class="sec-items-container">
+                            <div class="sec-item">projects</div>
+                        </li>
                     </div>
                     <div class="sec-nav-right">
-                        <li class="sec-items-container"><a href="#" class="sec-item" id="support">support</a></li>
+                        <li class="sec-items-container"><a href="#" class="sec-item">support</a></li>
                     </div>
 
                 </ul>
@@ -194,42 +215,6 @@
 
         </div>
 
-
-
-
-
-
-        <!-- <div id="carousel">
-            <div class="info-text">
-                <h1 class="info-text-title">iPhone 6 32Gb Black</h1>
-                <div class="info-text-body">At first, for some time, I was not able to answer him one word; but as
-                    he
-                    had taken me in his arms I held fast by him, or I should have fallen to the ground. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Nesciunt perferendis deserunt ratione minus vitae
-                    nobis
-                    dolore, saepe atque iure ex.</div>
-                <div class="btn-group">
-                    <button class="buy-btn .centered">buy now</button>
-                </div>
-            </div>
-            <div class="info-img-container">
-                <img src="./assets/iphone6.webp" alt="Iphone 6" class="info-img">
-                <div class="right-arrow centered">
-                    <i class="fal fa-angle-right right-arrow-icon icon"></i>
-                </div>
-            </div>
-
-              <div class="dots-container">
-                <div class="dot full"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-
-        </div> -->
-
-
         <div id="website-body">
             <div class="top-filter-container">
                 <div class="filter-area">
@@ -239,7 +224,6 @@
 
                         <ul class="options">
                             <li class="option">best match</li>
-                            <li class="option">worst match</li>
                             <li class="option">no match</li>
                             <li class="option">1 match</li>
                         </ul>
@@ -261,11 +245,11 @@
                         <input type="number" class="price-range price-range-min" value="1">
                         <div class="dash-icon">-</div>
 
-                        <input type="number" class="price-range price-range-max" value="10000">
+                        <input type="number" class="price-range price-range-max" value="1000">
                     </div>
 
                     <div class="shipping-container">
-                        <input id="free" class="radio-custom icon" name="radio-group" type="checkbox">
+                        <input class="radio-custom icon" name="radio-group" type="checkbox">
                         <label for="free" class="radio-custom-label">Free Shipping</label>
                     </div>
                 </div>
@@ -279,7 +263,6 @@
                             <li class="option">usa</li>
                             <li class="option">japan</li>
                             <li class="option">china</li>
-                            <li class="option">kazakhstan</li>
                         </ul>
 
                         <div class="arrow">
@@ -293,87 +276,89 @@
 
             <div class="main-body">
                 <div class="left-filter-section">
-                    <div class="category">
+                    <div class="category category-menu">
+
                         <div class="section special-section" data-opened="false" tabindex="99">
-                            <div class="visual">
+                            <a class="visual">
                                 <div class="section-title">Top Sales</div>
                                 <div class="section-arrow centered">
                                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                                 </div>
-                            </div>
+                            </a>
+
                             <div class="section-data section1-data">
-
+                                <a class="item item-title">cell phones</a>
+                                <a class="item item-title">cameras</a>
+                                <a class="item item-title">computers</a>
                             </div>
-
                         </div>
 
-                        <div class="section special-section" data-opened="false" tabindex="98">
-                            <div class="visual">
+                        <div class="section special-section" data-opened="false" tabindex="99">
+                            <a class="visual">
                                 <div class="section-title">Brand Focus</div>
                                 <div class="section-arrow centered">
                                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                                 </div>
-                            </div>
-                            <div class="section-data section2-data">
-                                <div class="item">
-                                    <a class="item-title">cell phones</a>
-                                </div>
-                                <div class="item">
-                                    <a class="item-title">cameras</a>
-                                </div>
-                            </div>
+                            </a>
 
+                            <div class="section-data section1-data">
+
+                                <a class="item item-title">tv, audio</a>
+                                <a class="item item-title">video games</a>
+                            </div>
                         </div>
 
-                        <div class="section special-section" data-opened="false" tabindex="97">
-                            <div class="visual">
-                                <div class="section-title">Hi-tech</div>
+
+                        <div class="section special-section" data-opened="false" tabindex="99">
+                            <a class="visual">
+                                <div class="section-title">Hi-Tech</div>
                                 <div class="section-arrow centered">
                                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                                 </div>
-                            </div>
-                            <div class="section-data section3-data">
-                                <div class="item">
-                                    <a class="item-title">cell phones</a>
-                                </div>
-                                <div class="item">
-                                    <a class="item-title">cameras</a>
-                                </div>
-                                <div class="item">
-                                    <a class="item-title">computers</a>
-                                </div>
-                                <div class="item">
-                                    <a class="item-title">tv, audio</a>
-                                </div>
-                                <div class="item">
-                                    <a class="item-title">video games</a>
-                                </div>
-                            </div>
+                            </a>
 
+                            <div class="section-data section1-data">
+                                <a class="item item-title">cell phones</a>
+                                <a class="item item-title">cameras</a>
+                                <a class="item item-title">computers</a>
+                                <a class="item item-title">tv, audio</a>
+                                <a class="item item-title">video games</a>
+                            </div>
                         </div>
 
-                        <div class="section special-section" data-opened="false" tabindex="96">
-                            <div class="visual">
+
+                        <div class="section special-section" data-opened="false" tabindex="99">
+                            <a class="visual">
                                 <div class="section-title">Home</div>
                                 <div class="section-arrow centered">
                                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                                 </div>
-                            </div>
-                            <div class="section-data section4-data"></div>
+                            </a>
 
+                            <div class="section-data section1-data">
+                                <a class="item item-title">cell phones</a>
+                                <a class="item item-title">cameras</a>
+                                <a class="item item-title">computers</a>
+                                <a class="item item-title">tv, audio</a>
+                                <a class="item item-title">video games</a>
+                            </div>
                         </div>
 
-                        <div class="section special-section" data-opened="false" tabindex="95">
-                            <div class="visual">
+                        <div class="section special-section" data-opened="false" tabindex="99">
+                            <a class="visual">
                                 <div class="section-title">Sale</div>
                                 <div class="section-arrow centered">
                                     <i class="fal fa-angle-right right-arrow-icon icon"></i>
                                 </div>
-                            </div>
-                            <div class="section-data section5-data">
+                            </a>
 
+                            <div class="section-data section1-data">
+                                <a class="item item-title">cell phones</a>
+                                <a class="item item-title">cameras</a>
+                                <a class="item item-title">computers</a>
+                                <a class="item item-title">tv, audio</a>
+                                <a class="item item-title">video games</a>
                             </div>
-
                         </div>
 
                     </div>
@@ -390,7 +375,7 @@
                                     <div class="section-select-variant">
                                         <div class="centered select-variant-container">
                                             <input type="radio" class="select-variant centered" value="in storage"
-                                                id="storage" name="where">
+                                                name="where">
                                             <label for="storage">In Storage</label>
                                         </div>
                                         <div class="quantity">45</div>
@@ -399,7 +384,7 @@
                                     <div class="section-select-variant">
                                         <div class="centered select-variant-container">
                                             <input type="radio" class="select-variant centered" value="in online"
-                                                id="online" name="where">
+                                                name="where">
                                             <label for="online">In Online-Shop</label>
                                         </div>
                                         <div class="quantity">12</div>
@@ -417,45 +402,38 @@
                         <div class="section">
                             <div class="visual no-bb">
                                 <div class="check-custom-container">
-                                    <input id="apple" class="check-custom icon" type="checkbox" name="op1"
-                                        value="apple">
+                                    <input class="check-custom icon" type="checkbox" name="op1" value="apple">
                                     <label for="apple" class="check-custom-label">Apple</label>
                                 </div>
+
+                                <div class="quan">32</div>
                             </div>
 
                             <div class="visual no-bb">
                                 <div class="check-custom-container">
-                                    <input id="manufacturer" class="check-custom icon" type="checkbox" name="op2"
-                                        value="manufacturer">
-                                    <label for="manufacturer" class="check-custom-label">Manufacturer
-                                        Refurbished</label>
+                                    <input class="check-custom icon" type="checkbox" name="opjbl" value="jbl">
+                                    <label for="jbl" class="check-custom-label">JBL</label>
                                 </div>
+
+                                <div class="quan">14</div>
                             </div>
 
                             <div class="visual no-bb">
                                 <div class="check-custom-container">
-                                    <input id="seller" class="check-custom icon" type="checkbox" name="op3"
-                                        value="seller">
-                                    <label for="seller" class="check-custom-label">Seller
-                                        Refurbished</label>
+                                    <input class="check-custom icon" type="checkbox" name="opbose" value="bose">
+                                    <label for="bose" class="check-custom-label">Bose</label>
                                 </div>
+
+                                <div class="quan">3</div>
                             </div>
 
                             <div class="visual no-bb">
                                 <div class="check-custom-container">
-                                    <input id="used" class="check-custom icon" type="checkbox" name="op4" value="used">
-                                    <label for="used" class="check-custom-label">Used</label>
+                                    <input class="check-custom icon" type="checkbox" name="op4" value="nest">
+                                    <label for="nest" class="check-custom-label">Nest</label>
                                 </div>
-                            </div>
 
-
-                            <div class="visual no-bb">
-                                <div class="check-custom-container">
-                                    <input id="not-working" class="check-custom icon" type="checkbox" name="op4"
-                                        value="not-working">
-                                    <label for="not-working" class="check-custom-label">For Parts or Not
-                                        Working</label>
-                                </div>
+                                <div class="quan">5</div>
                             </div>
 
                         </div>
@@ -463,6 +441,58 @@
 
 
                     </div>
+
+
+                    <div class="category">
+                        <div class="section">
+                            <div class="visual">
+                                <div class="section-title-sm-caps">condition</div>
+                                <a href="#" class="all">all</a>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="visual no-bb">
+                                <div class="check-custom-container">
+                                    <input class="check-custom icon" type="checkbox" name="opnew" value="new">
+                                    <label for="new" class="check-custom-label">New</label>
+                                </div>
+                            </div>
+
+                            <div class="visual no-bb">
+                                <div class="check-custom-container">
+                                    <input class="check-custom icon" type="checkbox" name="op2" value="manufacturer">
+                                    <label for="manufacturer" class="check-custom-label">Manufacturer
+                                        Refurbished</label>
+                                </div>
+                            </div>
+
+                            <div class="visual no-bb">
+                                <div class="check-custom-container">
+                                    <input class="check-custom icon" type="checkbox" name="op3" value="seller">
+                                    <label for="seller" class="check-custom-label">Seller
+                                        Refurbished</label>
+                                </div>
+                            </div>
+
+                            <div class="visual no-bb">
+                                <div class="check-custom-container">
+                                    <input class="check-custom icon" type="checkbox" name="op4" value="used">
+                                    <label for="used" class="check-custom-label">Used</label>
+                                </div>
+                            </div>
+
+
+                            <div class="visual no-bb">
+                                <div class="check-custom-container">
+                                    <input class="check-custom icon" type="checkbox" name="op4" value="not-working">
+                                    <label for="not-working" class="check-custom-label">For Parts or Not
+                                        Working</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
 
                     <div class="category">
                         <div class="section">
@@ -476,7 +506,7 @@
                                     <div class="section-select-variant row pp">
                                         <div class="centered select-variant-container">
                                             <input type="radio" class="select-variant centered" value="free-shippment"
-                                                id="free-shippment" name="shippment-2" checked>
+                                                name="shippment-2" checked>
                                             <label for="free-shippment">free</label>
                                         </div>
                                     </div>
@@ -486,7 +516,7 @@
                                     <div class="section-select-variant pp">
                                         <div class="centered select-variant-container">
                                             <input type="radio" class="select-variant centered" value="499-shippment"
-                                                id="499-shippment" name="shippment-2">
+                                                name="shippment-2">
                                             <label for="499-shippment">$ 4.99</label>
                                         </div>
                                     </div>
@@ -761,7 +791,7 @@
         <div id="footer">
             <div class="with-menu">
                 <div class="logo">
-                    <img src="./assets/Portland.svg" alt="logo" class="logo-image">
+                    <a href="#nav-bar"><img src="./assets/Portland.svg" alt="logo" class="logo-image"></a>
                 </div>
 
                 <div class="footer-menu">
