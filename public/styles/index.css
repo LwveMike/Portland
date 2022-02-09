@@ -1,7 +1,10 @@
 html {
     scroll-behavior: smooth;
 
+
 }
+
+
 
 
 #app {
@@ -16,6 +19,7 @@ html {
     --promoted-color: #3a405b;
 
     --filter-title-color: #a1a8bd;
+
 
     
 }
@@ -315,6 +319,7 @@ html {
 
 .fotorama {
     position: relative;
+
 }
 
 .fotorama__nav-wrap {
@@ -797,8 +802,8 @@ input[type=number] {
 
 
 .check-custom {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     opacity: 0;
     position: absolute;   
 }
@@ -1311,7 +1316,7 @@ input[type=number] {
 
 .section-select label {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 
